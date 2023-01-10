@@ -15,4 +15,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-java -jar /opt/cutedatagen.jar
+java -jar /opt/data-generator.jar
