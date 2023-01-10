@@ -1,14 +1,14 @@
 spring:
   kafka:
-#    consumer:
-#      bootstrap-servers: localhost:9092
-#      group-id: group_id
-#      auto-offset-reset: earliest
-#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-#      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    #    consumer:
+    #      bootstrap-servers: localhost:9092
+    #      group-id: group_id
+    #      auto-offset-reset: earliest
+    #      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    #      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
     producer:
       #bootstrap-servers: b-3.rdskafkareplication.qh77pm.c1.kafka.us-east-1.amazonaws.com:9092,b-1.rdskafkareplication.qh77pm.c1.kafka.us-east-1.amazonaws.com:9092,b-2.rdskafkareplication.qh77pm.c1.kafka.us-east-1.amazonaws.com:9092
-      bootstrap-servers: localhost:9092
+      bootstrap-servers: ${KAFKA_BROKERS}
       batch-size: 30
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
