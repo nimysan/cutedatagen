@@ -1,4 +1,4 @@
-# IDEA
+# 专门用于产生测试数据的子模块
 
 ```bash
 cd scripts
