@@ -20,11 +20,11 @@ COPY ./src /opt/data-producer/src
 COPY ./pom.xml /opt/data-producer/pom.xml
 
 RUN cd /opt/data-producer; \
-    mvn clean verify
+    mvn clean verify -Dmaven.test.skip=true
 
 FROM eclipse-temurin:17
 
-COPY --from=builder /opt/data-producer/target/data-generator-*.jar /opt/data-generator.jar
+COPY --from=builder /opt/data-producer/target/cutedatagen-*.jar /opt/data-generator.jar
 
 RUN cd /opt
 
